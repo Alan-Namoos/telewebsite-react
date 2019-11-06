@@ -61,6 +61,7 @@ typings/
 
 # next.js build output
 .next
+<<<<<<< HEAD
 
 # dependencies
 /node_modules
@@ -81,3 +82,5 @@ typings/
 .env.production.local
 
 
+=======
+>>>>>>> 01f54ff9952751a44243c1341cd498836c06cb8d
