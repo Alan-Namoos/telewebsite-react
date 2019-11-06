@@ -44,7 +44,7 @@ const AddBoxForm = () => {
     <>
       <form onSubmit={handleSubmit}>
         <div className="form-groub">
-          <label htmlFor="number">Box Number</label>
+          {/* <label htmlFor="number">Box Number</label> */}
           <select
             value={number}
             onChange={handleChange}
@@ -54,7 +54,7 @@ const AddBoxForm = () => {
             name="number"
             required
           >
-            <option value="selectBox">Select Box</option>
+            <option value="selectBox">Select a Box</option>
             {dataBoxList.map((box, i) => {
               return (
                 <option key={box.id} value={box.number}>
@@ -65,9 +65,9 @@ const AddBoxForm = () => {
           </select>
         </div>
 
-        <button type="submit" className="btn btn-primary btn-block">
+        {/* <button type="submit" className="btn btn-primary btn-block">
           Add Box
-        </button>
+        </button> */}
       </form>
     </>
   );

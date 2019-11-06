@@ -4,8 +4,6 @@ import { BoxListContext } from "../../contexts/BoxListContext";
 
 const BoxListTable = () => {
   const { boxList } = useContext(BoxListContext);
-  // console.log("Table Box List", boxList);
-  // console.log("Table Box List", sortBy(boxList, ["number"]));
   const sortedBoxList = sortBy(boxList, ["number"]);
   return (
     <table className="table table-bordered">

@@ -10,17 +10,21 @@ const BoxTable = () => {
   const isVisible = true;
   console.log(boxList);
   return (
-    <table className="table">
+    <table className="table table-bordered">
       <thead>
         <tr>
-          <th>Box</th>
+          <th scope="col">#</th>
+          <th scope="col">Box</th>
         </tr>
       </thead>
       <tbody>
-        {sortedBoxList.map(box => {
+        {sortedBoxList.map((box, i) => {
           return (
             <tr key={box.id}>
-              <td className={isVisible === true ? "" : "hide"}>{box.number}</td>
+              <td>{i + 1}</td>
+              <td className={isVisible === true ? "" : "hide"}>
+                T {box.number}
+              </td>
             </tr>
           );
         })}

@@ -1,0 +1,116 @@
+/* Qtc Table styles  */
+table#mouse {
+  text-align: center;
+  overflow: hidden;
+  z-index: 1;
+  font-family: "verdana";
+  font-weight: bold;
+  cursor: default;
+  color: #000000;
+}
+
+#mouse td,
+#mouse th {
+  font-size: 10px;
+  height: 15px;
+}
+
+#mouse td,
+#mouse th,
+.ff-fix {
+  padding: 0 8px 0 8px;
+  position: relative;
+  border: 1px solid;
+}
+
+#mouse td:hover::after,
+.ff-fix:hover::after {
+  background-color: #00bfff;
+  content: "\00a0";
+  height: 10000px;
+  left: 0;
+  position: absolute;
+  top: -5000px;
+  width: 100%;
+  z-index: -1;
+}
+
+#mouse tr:hover {
+  background-color: #00bfff;
+  border-width: 5px;
+}
+
+#mouse td:hover {
+  color: #00bfff;
+  font-weight: bold;
+  border-color: #00bfff;
+  border-width: 5px;
+  font-size: 22px;
+}
+
+.green,
+.qtc-calc-green {
+  background-color: #2e8b57;
+}
+.yellow,
+.qtc-calc-yellow {
+  background-color: #ffd700;
+}
+.qtc-red,
+.qtc-calc-red {
+  background-color: #b22222;
+}
+
+.qtc-calc-green,
+.qtc-calc-yellow,
+.qtc-calc-red {
+  color: #ffffff;
+}
+
+#results {
+  margin: 0 auto;
+  padding: 5px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#results ul {
+  list-style-type: none;
+}
+
+#results li {
+  display: inline;
+  padding: 0 20px;
+  border-right: 1px solid gray;
+}
+
+#results li:last-child {
+  border-right: none;
+}
+
+#content {
+  width: 950px;
+}
+
+#qtc_table {
+  width: 700px;
+  box-shadow: 2px 2px 5px #303030;
+}
+
+#qtc_table:hover {
+  width: 720px;
+}
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+.footer-container {
+  width: auto;
+  max-width: 100%;
+  padding: 0 15px;
+}
+
+.footer {
+  background-color: #f5f5f5;
+}

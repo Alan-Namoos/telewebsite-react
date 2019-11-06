@@ -8,6 +8,7 @@ import BoxGridContextProvider from "./contexts/BoxGridContext";
 import Home from "./components/Home";
 import Nav from "./components/Nav";
 import EDAdmissionLog from "./components/EDAdmissionLog";
+import BoxListContainer from "./components/boxList/BoxListContainer";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
                 <BoxGridContextProvider>
                   <Route exact path="/" component={Home} />
                   <Route path="/ed-admission-log" component={EDAdmissionLog} />
+                  <Route path="/box-list" component={BoxListContainer} />
                   <Route path="/box-grid" component={BoxGridContainer} />
                 </BoxGridContextProvider>
               </BoxListContextProvider>

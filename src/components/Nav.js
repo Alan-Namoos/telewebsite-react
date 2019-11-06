@@ -10,8 +10,11 @@ const Nav = () => {
       <NavLink to="/ed-admission-log" className="nav-link">
         ED Admission Log
       </NavLink>
+      <NavLink to="/box-list" className="nav-link">
+        Add Boxes (List)
+      </NavLink>
       <NavLink to="/box-grid" className="nav-link">
-        Box Grid
+        Add Boxes (Grid)
       </NavLink>
     </nav>
   );
