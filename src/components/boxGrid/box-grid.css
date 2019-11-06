@@ -1,0 +1,20 @@
+.grid-cell {
+  background: rgb(209, 210, 218);
+  /* max-width: 70px; */
+  margin: 5px;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.grid-cell:hover {
+  cursor: pointer;
+}
+
+.grid-container {
+  min-width: 50px;
+}
+
+.hide {
+  display: none;
+}
