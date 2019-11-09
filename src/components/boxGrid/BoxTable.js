@@ -10,7 +10,7 @@ const BoxTable = () => {
   const isVisible = true;
   console.log(boxList);
   return (
-    <table className="table table-bordered">
+    <table className="table table-bordered table-sm text-center">
       <thead>
         <tr>
           <th scope="col">#</th>

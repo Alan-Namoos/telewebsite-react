@@ -1,10 +1,6 @@
 .grid-cell {
-  background: #cce5ff;
-  /* max-width: 70px; */
   margin: 5px;
   border-radius: 5px;
-  font-size: 18px;
-  font-weight: bold;
 }
 
 .grid-cell:hover {
@@ -12,9 +8,5 @@
 }
 
 .grid-container {
-  min-width: 50px;
-}
-
-.hide {
-  display: none;
+  margin-left: 20px;
 }

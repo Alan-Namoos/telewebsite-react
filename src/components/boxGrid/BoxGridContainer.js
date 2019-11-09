@@ -3,6 +3,7 @@ import { BoxListContext } from "../../contexts/BoxListContext";
 import BoxGrid from "./BoxGrid";
 import BoxTable from "./BoxTable";
 import "./box-grid.css";
+import AddBoxForm from "../boxList/AddBoxForm";
 
 const BoxGridContainer = () => {
   const [boxNumber, setBoxNumber] = useState("");
@@ -28,8 +29,11 @@ const BoxGridContainer = () => {
     <>
       <h4 className={className}>{boxList.length} Boxes in ED cabinet</h4>
       <div className="row">
-        <div className="col-sm-4">
+        <div className="col-sm-2">
           {boxList.length === 0 ? "No Boxes selected." : <BoxTable />}
+        </div>
+        <div className="col-sm-2">
+          <AddBoxForm />
         </div>
         <div className="col-sm-8">
           <BoxGrid selectBox={selectBox} />

@@ -6,7 +6,7 @@ const BoxListTable = () => {
   const { boxList } = useContext(BoxListContext);
   const sortedBoxList = sortBy(boxList, ["number"]);
   return (
-    <table className="table table-bordered">
+    <table className="table table-bordered table-sm">
       <thead>
         <tr>
           <th scope="col">#</th>

@@ -2,6 +2,8 @@ import React, { Fragment, useState, useContext } from "react";
 import sortBy from "lodash/sortBy";
 import { TransferLogContext } from "../../contexts/TransferLogContext";
 import { BoxListContext } from "../../contexts/BoxListContext";
+import edRooms from "../../data/edRooms";
+import floorRooms from "../../data/floorRooms";
 
 const TransferLogForm = () => {
   const { boxList, removeBox } = useContext(BoxListContext);
@@ -11,7 +13,8 @@ const TransferLogForm = () => {
     fromRoom: "",
     toRoom: ""
   });
-
+  const EDRooms = edRooms();
+  const FloorRooms = floorRooms();
   const boxesInED =
     boxList.length > 0
       ? `Select a box - ${boxList.length} availabe`
@@ -29,6 +32,7 @@ const TransferLogForm = () => {
     removeBox(transferLog.boxNumber);
     setTransferLog({ boxNumber: "", fromRoom: "", toRoom: "" });
   };
+  console.log(transferLog);
   return (
     <Fragment>
       <form onSubmit={handleSubmit}>
@@ -46,7 +50,7 @@ const TransferLogForm = () => {
             {sortBy(boxList, ["number"]).map((box, i) => {
               return (
                 <option key={box.id} value={box.number}>
-                  {box.number}
+                  T {box.number}
                 </option>
               );
             })}
@@ -55,20 +59,28 @@ const TransferLogForm = () => {
 
         <div className="form-group">
           <label htmlFor="fromRoom">From Room:</label>
-          <input
+          <select
             value={transferLog.fromRoom}
             onChange={handleChange}
-            type="text"
             className="form-control"
             id="fromRoom"
             name="fromRoom"
             required
-          />
+          >
+            <option value="">{"Select ED Room"}</option>
+            {sortBy(EDRooms, ["number"]).map((room, i) => {
+              return (
+                <option key={room} value={room}>
+                  {room}
+                </option>
+              );
+            })}
+          </select>
         </div>
 
         <div className="form-group">
           <label htmlFor="toRoom">To Room:</label>
-          <input
+          <select
             value={transferLog.toRoom}
             onChange={handleChange}
             type="text"
@@ -76,7 +88,16 @@ const TransferLogForm = () => {
             id="toRoom"
             name="toRoom"
             required
-          />
+          >
+            <option>{"Select Room"}</option>
+            {sortBy(FloorRooms, ["number"]).map((room, i) => {
+              return (
+                <option key={room} value={room}>
+                  {room}
+                </option>
+              );
+            })}
+          </select>
         </div>
 
         <button type="submit" className="btn btn-primary btn-block">
