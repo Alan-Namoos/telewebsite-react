@@ -14,23 +14,18 @@ function App() {
   return (
     <Router>
       {/* <Nav /> */}
-      <div className="container">
-        <div className="row">
-          <div className="col">
-            <TransferLogContextProvider>
-              <BoxListContextProvider>
-                <BoxGridContextProvider>
-                  <Nav />
-                  <Route exact path="/" component={Home} />
-                  <Route path="/ed-admission-log" component={EDAdmissionLog} />
-                  {/* <Route path="/box-list" component={BoxListContainer} /> */}
-                  <Route path="/box-grid" component={BoxGridContainer} />
-                </BoxGridContextProvider>
-              </BoxListContextProvider>
-            </TransferLogContextProvider>
-          </div>
-        </div>
-      </div>
+
+      <TransferLogContextProvider>
+        <BoxListContextProvider>
+          <BoxGridContextProvider>
+            <Nav />
+            <Route exact path="/" component={Home} />
+            <Route path="/ed-admission-log" component={EDAdmissionLog} />
+            {/* <Route path="/box-list" component={BoxListContainer} /> */}
+            <Route path="/box-grid" component={BoxGridContainer} />
+          </BoxGridContextProvider>
+        </BoxListContextProvider>
+      </TransferLogContextProvider>
     </Router>
   );
 }

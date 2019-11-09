@@ -7,13 +7,14 @@ const TransferLogTable = () => {
   const duplicate = "";
   return (
     <Fragment>
-      <table className="table table-bordered table-striped table-sm text-center">
-        <thead>
+      <table className="table table-bordered table-sm text-center">
+        <thead class="thead-light">
           <tr>
             {/* <th scope="col">Count</th> */}
             <th scope="col">Box</th>
             <th scope="col">From Room</th>
             <th scope="col">To Room</th>
+            <th colSpan="3"> Actions</th>
           </tr>
         </thead>
         <tbody>
@@ -24,6 +25,30 @@ const TransferLogTable = () => {
                 <td>T {log.boxNumber}</td>
                 <td>{log.fromRoom}</td>
                 <td>{log.toRoom}</td>
+                <td>
+                  <button
+                    className="btn btn-warning btn-sm"
+                    style={{ width: "75px" }}
+                  >
+                    Cancel
+                  </button>
+                </td>
+                <td>
+                  <button
+                    className="btn btn-success btn-sm"
+                    style={{ width: "75px" }}
+                  >
+                    Edit
+                  </button>
+                </td>
+                <td>
+                  <button
+                    className="btn btn-primary btn-sm"
+                    style={{ width: "75px" }}
+                  >
+                    Admitted
+                  </button>
+                </td>
               </tr>
             );
           })}

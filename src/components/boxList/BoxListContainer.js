@@ -10,11 +10,13 @@ const BoxListContainer = () => {
   return (
     <>
       <h4 className={className}>{boxList.length} Boxes in ED cabinet</h4>
-      <div className="row">
-        <div className="col">
-          <AddBoxForm />
-          <hr />
-          {boxList.length === 0 ? "No Boxes selected." : <BoxListTable />}
+      <div className="container">
+        <div className="row">
+          <div className="col">
+            <AddBoxForm />
+            <hr />
+            {boxList.length === 0 ? "No Boxes selected." : <BoxListTable />}
+          </div>
         </div>
       </div>
     </>

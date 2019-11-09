@@ -28,15 +28,17 @@ const BoxGridContainer = () => {
   return (
     <>
       <h4 className={className}>{boxList.length} Boxes in ED cabinet</h4>
-      <div className="row">
-        <div className="col-sm-2">
-          {boxList.length === 0 ? "No Boxes selected." : <BoxTable />}
-        </div>
-        <div className="col-sm-2">
-          <AddBoxForm />
-        </div>
-        <div className="col-sm-8">
-          <BoxGrid selectBox={selectBox} />
+      <div className="container">
+        <div className="row">
+          <div className="col-sm-2">
+            {boxList.length === 0 ? "No Boxes selected." : <BoxTable />}
+          </div>
+          <div className="col-sm-2">
+            <AddBoxForm />
+          </div>
+          <div className="col-sm-8">
+            <BoxGrid selectBox={selectBox} />
+          </div>
         </div>
       </div>
     </>
