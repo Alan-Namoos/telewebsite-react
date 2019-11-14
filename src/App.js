@@ -13,15 +13,12 @@ import EDAdmissionLog from "./components/EDAdmissionLog";
 function App() {
   return (
     <Router>
-      {/* <Nav /> */}
-
       <TransferLogContextProvider>
         <BoxListContextProvider>
           <BoxGridContextProvider>
             <Nav />
             <Route exact path="/" component={Home} />
             <Route path="/ed-admission-log" component={EDAdmissionLog} />
-            {/* <Route path="/box-list" component={BoxListContainer} /> */}
             <Route path="/box-grid" component={BoxGridContainer} />
           </BoxGridContextProvider>
         </BoxListContextProvider>

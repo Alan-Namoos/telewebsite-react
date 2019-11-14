@@ -1,5 +1,5 @@
 import React from 'react';
-import './qtc.css'
+import './qtcGrid.css'
 
 const QtcGrid = () => {
 

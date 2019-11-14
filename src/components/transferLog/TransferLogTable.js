@@ -1,4 +1,4 @@
-import React, { Fragment, useContext } from "react";
+import React, { useContext } from "react";
 import { TransferLogContext } from "../../contexts/TransferLogContext";
 
 const TransferLogTable = () => {
@@ -6,9 +6,9 @@ const TransferLogTable = () => {
   // const duplicate = "bg-danger text-white";
   const duplicate = "";
   return (
-    <Fragment>
+    <>
       <table className="table table-bordered table-sm text-center">
-        <thead class="thead-light">
+        <thead className="thead-light">
           <tr>
             {/* <th scope="col">Count</th> */}
             <th scope="col">Box</th>
@@ -54,7 +54,7 @@ const TransferLogTable = () => {
           })}
         </tbody>
       </table>
-    </Fragment>
+    </>
   );
 };
 

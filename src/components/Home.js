@@ -1,20 +1,23 @@
 import React from "react";
-import QtcGrid from "./telewebsite/QtcGrid";
+import QtcGrid from "./telewebsite/qtcGrid/QtcGrid";
+import FormsAndToolsAccordion from "./telewebsite/formsAndTools/FormsAndToolsAccordion";
+import { Container, Row, Col } from "react-bootstrap";
 
 const Home = () => {
   return (
     <>
-      <div className="container">
-        <div className="row">
-          <div className="col">
+      <Container>
+        <Row>
+          <Col>
             <h3 className="text-center">QTc Grid</h3>
             <QtcGrid />
-          </div>
-          <div className="col">
+          </Col>
+          <Col>
             <h3 className="text-center">Forms & Tools</h3>
-          </div>
-        </div>
-      </div>
+            <FormsAndToolsAccordion />
+          </Col>
+        </Row>
+      </Container>
     </>
   );
 };

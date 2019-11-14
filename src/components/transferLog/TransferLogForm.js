@@ -1,4 +1,4 @@
-import React, { Fragment, useState, useContext } from "react";
+import React, { useState, useContext } from "react";
 import sortBy from "lodash/sortBy";
 import { TransferLogContext } from "../../contexts/TransferLogContext";
 import { BoxListContext } from "../../contexts/BoxListContext";
@@ -34,7 +34,7 @@ const TransferLogForm = () => {
   };
   console.log(transferLog);
   return (
-    <Fragment>
+    <>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="boxNumber">Box Number:</label>
@@ -104,7 +104,7 @@ const TransferLogForm = () => {
           Add record
         </button>
       </form>
-    </Fragment>
+    </>
   );
 };
 
