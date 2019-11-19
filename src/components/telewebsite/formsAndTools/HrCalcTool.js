@@ -10,11 +10,6 @@ const HrCalcTool = () => {
   };
 
   useEffect(() => {
-    // if (heartRate === 0) {
-    //   return;
-    // } else {
-    //   setHeartRate(Math.floor(1500 / rr));
-    // }
     setHeartRate(Math.floor(1500 / rr));
   }, [rr]);
 
@@ -23,25 +18,12 @@ const HrCalcTool = () => {
     numbers.push(i + 1);
   }
 
-  console.log("rr: ", rr);
-  console.log("HR: ", heartRate);
-
   return (
-    <Card className="text-center">
+    <Card className="text-center shadow-sm">
       <Card.Body>
         <Card.Title>HR Calculater (R-R)</Card.Title>
         <hr />
         <Card.Text></Card.Text>
-        {/* <input
-          className="form-control"
-          type="number"
-          autoComplete="off"
-          id="txt_r_r"
-          maxLength="4"
-          placeholder="Number of Small boxes"
-          required
-          onKeyUp={calc_hr()}
-        /> */}
         <select
           id="rr"
           onChange={handleChange}
@@ -62,7 +44,7 @@ const HrCalcTool = () => {
         {heartRate === 0 || heartRate === Infinity ? (
           ""
         ) : (
-          <h5 className="text-center mt-2">
+          <h5 className="text-center mt-2 animated flipInX">
             <Badge variant="primary">HR: {heartRate}</Badge>
           </h5>
         )}
