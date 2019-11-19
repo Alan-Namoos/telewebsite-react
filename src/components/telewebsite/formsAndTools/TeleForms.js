@@ -11,7 +11,7 @@ const TeleForms = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Admit-DC Form
+            Admit-DC Log
           </a>
         </ListGroup.Item>
         <ListGroup.Item>
@@ -29,7 +29,7 @@ const TeleForms = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            ED Admission Log (With Label){" "}
+            ED Admission Log (with Label)
           </a>
         </ListGroup.Item>
       </ListGroup>

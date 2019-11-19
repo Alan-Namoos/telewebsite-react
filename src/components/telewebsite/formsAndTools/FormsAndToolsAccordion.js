@@ -5,9 +5,9 @@ import QtcCalcTool from "./QtcCalcTool";
 import HrCalcTool from "./HrCalcTool";
 const FormsAndToolsAccordion = () => {
   return (
-    <Accordion className="text-center">
+    <Accordion>
       <Card>
-        <Card.Header>
+        <Card.Header className="text-center">
           <Accordion.Toggle as={Button} variant="link" eventKey="0">
             FORMS
           </Accordion.Toggle>
@@ -20,7 +20,7 @@ const FormsAndToolsAccordion = () => {
       </Card>
 
       <Card>
-        <Card.Header>
+        <Card.Header className="text-center">
           <Accordion.Toggle as={Button} variant="link" eventKey="1">
             QTc Calculater
           </Accordion.Toggle>
@@ -32,7 +32,7 @@ const FormsAndToolsAccordion = () => {
         </Accordion.Collapse>
       </Card>
       <Card>
-        <Card.Header>
+        <Card.Header className="text-center">
           <Accordion.Toggle as={Button} variant="link" eventKey="2">
             HR Calculater
           </Accordion.Toggle>

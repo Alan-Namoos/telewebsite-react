@@ -8,11 +8,11 @@ const Home = () => {
     <>
       <Container>
         <Row>
-          <Col>
+          <Col xs={8}>
             <h3 className="text-center">QTc Grid</h3>
             <QtcGrid />
           </Col>
-          <Col>
+          <Col xs={4}>
             <h3 className="text-center">Forms & Tools</h3>
             <FormsAndToolsAccordion />
           </Col>
