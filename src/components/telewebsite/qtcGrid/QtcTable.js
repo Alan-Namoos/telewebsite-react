@@ -2,7 +2,7 @@ import React from 'react';
 
 const QtcTable = ({checkQtc}) => {
     return (
-        <table id="mouse" className="center" cellSpacing="0">
+        <table id="mouse" cellSpacing="0" style={{margin: '0 auto'}}>
                 <tbody>
                 <tr>
                   <th style={{"fontSize" : "8px"}}>small boxes</th>
