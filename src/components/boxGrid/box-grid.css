@@ -1,12 +1,16 @@
-.grid-cell {
-  margin: 5px;
-  border-radius: 5px;
+/* .grid-cell {
+
+  padding: 5px;
+
+  border: 1px solid #eee;
+  min-width: 90px;
 }
 
 .grid-cell:hover {
   cursor: pointer;
+  background: #eee;
 }
 
 .grid-container {
   margin-left: 20px;
-}
+} */

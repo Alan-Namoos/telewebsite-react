@@ -9,7 +9,7 @@ const EDAdmissionLog = () => {
 
   return (
     <>
-      <Container>
+      <Container fluid>
         <h4 className="text-center">{transferLogs.length} Admits so far</h4>
         <Row>
           <Col sm={9} className="mt-4">

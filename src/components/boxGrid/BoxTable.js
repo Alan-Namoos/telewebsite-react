@@ -8,7 +8,7 @@ const BoxTable = () => {
   const { boxList } = useContext(BoxListContext);
   const sortedBoxList = sortBy(boxList, ["number"]);
   const isVisible = true;
-  console.log(boxList);
+  // console.log(boxList);
   return (
     <table className="table table-bordered table-sm text-center">
       <thead>

@@ -1,4 +1,4 @@
-const floorRooms = () => {
+const sixthFloorRooms = () => {
   return [
     "601-1",
     "602-1",
@@ -52,4 +52,4 @@ const floorRooms = () => {
   ];
 };
 
-export default floorRooms;
+export default sixthFloorRooms;

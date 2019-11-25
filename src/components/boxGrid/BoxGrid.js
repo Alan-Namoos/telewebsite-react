@@ -13,7 +13,7 @@ const BoxGrid = ({ selectBox }) => {
             <div
               key={box.id}
               onClick={selectBox}
-              className="col-1 grid-cell bg-primary text-white text-center"
+              className="col-1 grid-cell hover text-center"
             >
               {box.number}
             </div>
