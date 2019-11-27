@@ -6,7 +6,7 @@ import { Container, Row, Col } from "react-bootstrap";
 const Home = () => {
   return (
     <>
-      <Container fluid>
+      <Container>
         <Row>
           <Col xl={8}>
             <h3 className="text-center">QTc Grid</h3>

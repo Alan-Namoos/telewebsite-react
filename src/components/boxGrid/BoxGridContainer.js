@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import { BoxListContext } from "../../contexts/BoxListContext";
 import BoxGrid from "./BoxGrid";
 import BoxTable from "./BoxTable";
-import "./box-grid.css";
+
 import AddBoxForm from "../boxList/AddBoxForm";
 
 const BoxGridContainer = () => {
@@ -28,7 +28,7 @@ const BoxGridContainer = () => {
   return (
     <>
       <h4 className={className}>{boxList.length} Boxes in ED cabinet</h4>
-      <div className="container">
+      <div className="container-fluid">
         <div className="row">
           <div className="col-sm-2">
             {boxList.length === 0 ? "No Boxes selected." : <BoxTable />}

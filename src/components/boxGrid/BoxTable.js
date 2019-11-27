@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 // import { BoxGridContext } from "../../contexts/BoxGridContext";
 import { BoxListContext } from "../../contexts/BoxListContext";
 import sortBy from "lodash/sortBy";
-import "./box-grid.css";
 
 const BoxTable = () => {
   const { boxList } = useContext(BoxListContext);

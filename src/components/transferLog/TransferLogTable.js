@@ -5,6 +5,7 @@ const TransferLogTable = () => {
   const { transferLogs } = useContext(TransferLogContext);
   // const duplicate = "bg-danger text-white";
   const duplicate = "";
+  const edCallDateAndTime = new Date();
   return (
     <>
       <table className="table table-bordered table-sm text-center">
@@ -14,6 +15,7 @@ const TransferLogTable = () => {
             <th scope="col">Box</th>
             <th scope="col">From Room</th>
             <th scope="col">To Room</th>
+            <th scope="col">Time</th>
             <th colSpan="3"> Actions</th>
           </tr>
         </thead>
@@ -25,6 +27,10 @@ const TransferLogTable = () => {
                 <td>T {log.boxNumber}</td>
                 <td>{log.fromRoom}</td>
                 <td>{log.toRoom}</td>
+                <td>
+                  {edCallDateAndTime.toLocaleTimeString()}{" "}
+                  {edCallDateAndTime.toLocaleDateString()}
+                </td>
                 <td>
                   <button
                     className="btn btn-warning btn-sm"

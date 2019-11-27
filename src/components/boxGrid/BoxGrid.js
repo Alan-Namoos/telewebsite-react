@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 // import boxes from "../../data/boxes.json";
 import { BoxListContext } from "../../contexts/BoxListContext";
-import "./box-grid.css";
 
 const BoxGrid = ({ selectBox }) => {
   const { dataBoxList } = useContext(BoxListContext);
