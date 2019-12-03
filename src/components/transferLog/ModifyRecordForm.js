@@ -15,18 +15,21 @@ import SelectAvailableEDBox from './SelectAvailableEDBox';
 import ChooseFloorGrid from './ChooseFloorGrid';
 import SelectToRoom from './SelectToRoom';
 
-const TransferLogForm = () => {
-	const { removeBox } = useContext(BoxListContext);
-	const { addTransferLog } = useContext(TransferLogContext);
+const ModifyRecordForm = ({ logID, boxNumber, fromRoom, toRoom, edCallTime }) => {
+	const { addBox } = useContext(BoxListContext);
+	const { updateTransferLog } = useContext(TransferLogContext);
 	const [selectedFloor, setSelectedFloor] = useState('');
 	const [floorRooms, setFloorRooms] = useState([]);
 	const [active, setActive] = useState('');
 	const [transferLog, setTransferLog] = useState({
+		id: logID,
 		boxNumber: '',
 		fromRoom: '',
 		toRoom: '',
 		edCallTime: ''
 	});
+
+	console.log('Transfer Log: ', transferLog);
 
 	const selectFloor = (floor) => {
 		setSelectedFloor(floor);
@@ -85,36 +88,35 @@ const TransferLogForm = () => {
 		setTransferLog({
 			...transferLog,
 			[e.target.name]: e.target.value
-			// edCallTime: new Date().toLocaleTimeString()
 		});
 	};
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		transferLog.edCallTime = new Date().toLocaleTimeString();
-		addTransferLog(transferLog);
-		removeBox(transferLog.boxNumber);
-		setTransferLog({ boxNumber: '', fromRoom: '', toRoom: '', edCallTime: '' });
+		updateTransferLog(transferLog);
+		addBox(transferLog.boxNumber);
+		setTransferLog({ id: '', boxNumber: '', fromRoom: '', toRoom: '', edCallTime: '' });
 		setSelectedFloor('');
 		setActive('');
 	};
 
 	return (
 		<form onSubmit={handleSubmit}>
-			<SelectAvailableEDBox boxNumber={transferLog.boxNumber} handleChange={handleChange} />
-			<SelectEDRooms fromRoom={transferLog.fromRoom} handleChange={handleChange} />
+			<SelectAvailableEDBox boxNumber={boxNumber} handleChange={handleChange} />
+			<SelectEDRooms fromRoom={fromRoom} handleChange={handleChange} />
 			<ChooseFloorGrid selectFloor={selectFloor} active={active} />
 			<SelectToRoom
-				toRoom={transferLog.toRoom}
+				toRoom={toRoom}
 				handleChange={handleChange}
 				selectedFloor={selectedFloor}
 				floorRooms={floorRooms}
 			/>
+			<input type='text' className='form-control' value={edCallTime} onChange={handleChange} />
 			<button type='submit' className='btn btn-primary btn-block'>
-				Add record
+				Update record
 			</button>
 		</form>
 	);
 };
 
-export default TransferLogForm;
+export default ModifyRecordForm;
