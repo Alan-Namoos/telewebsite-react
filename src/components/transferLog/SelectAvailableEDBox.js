@@ -14,7 +14,7 @@ const SelectAvailableEDBox = ({ boxNumber, handleChange }) => {
 					<Card.Title>Box Number: </Card.Title>
 					<Card.Text></Card.Text>
 					<div className='form-group'>
-						<input
+						{/* <input
 							type='text'
 							className='form-control'
 							id='boxNumber'
@@ -22,8 +22,8 @@ const SelectAvailableEDBox = ({ boxNumber, handleChange }) => {
 							required
 							value={boxNumber}
 							onChange={handleChange}
-						/>
-						{/* <select
+						/> */}
+						<select
 							value={boxNumber}
 							onChange={handleChange}
 							className='form-control'
@@ -39,7 +39,7 @@ const SelectAvailableEDBox = ({ boxNumber, handleChange }) => {
 									</option>
 								);
 							})}
-						</select> */}
+						</select>
 					</div>
 				</Card.Body>
 			</Card>
