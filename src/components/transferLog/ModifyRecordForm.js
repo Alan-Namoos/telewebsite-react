@@ -14,6 +14,7 @@ import eleventhFloorRooms from '../../data/eleventhFloorRooms';
 import SelectAvailableEDBox from './SelectAvailableEDBox';
 import ChooseFloorGrid from './ChooseFloorGrid';
 import SelectToRoom from './SelectToRoom';
+import { Row, Col } from 'react-bootstrap';
 
 const ModifyRecordForm = ({ logID, boxNumber, fromRoom, toRoom, edCallTime }) => {
 	const { addBox } = useContext(BoxListContext);
@@ -102,19 +103,39 @@ const ModifyRecordForm = ({ logID, boxNumber, fromRoom, toRoom, edCallTime }) =>
 
 	return (
 		<form onSubmit={handleSubmit}>
-			<SelectAvailableEDBox boxNumber={boxNumber} handleChange={handleChange} />
-			<SelectEDRooms fromRoom={fromRoom} handleChange={handleChange} />
-			<ChooseFloorGrid selectFloor={selectFloor} active={active} />
-			<SelectToRoom
-				toRoom={toRoom}
-				handleChange={handleChange}
-				selectedFloor={selectedFloor}
-				floorRooms={floorRooms}
-			/>
-			<input type='text' className='form-control' value={edCallTime} onChange={handleChange} />
-			<button type='submit' className='btn btn-primary btn-block'>
-				Update record
-			</button>
+			<Row>
+				<Col>
+					<SelectAvailableEDBox boxNumber={boxNumber} handleChange={handleChange} />
+				</Col>
+				<Col>
+					<SelectEDRooms fromRoom={fromRoom} handleChange={handleChange} />
+				</Col>
+				<Col>
+					<ChooseFloorGrid selectFloor={selectFloor} active={active} />
+				</Col>
+				<Col>
+					<SelectToRoom
+						toRoom={toRoom}
+						handleChange={handleChange}
+						selectedFloor={selectedFloor}
+						floorRooms={floorRooms}
+					/>
+				</Col>
+				<Col>
+					<input
+						type='text'
+						name='edCallTime'
+						className='form-control'
+						value={edCallTime}
+						onChange={handleChange}
+					/>
+				</Col>
+				<Col>
+					<button type='submit' className='btn btn-primary btn-block'>
+						Update record
+					</button>
+				</Col>
+			</Row>
 		</form>
 	);
 };
