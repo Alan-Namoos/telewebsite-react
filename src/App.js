@@ -7,7 +7,7 @@ import BoxGridContainer from './components/boxGrid/BoxGridContainer';
 import Home from './components/Home';
 import Nav from './components/Nav';
 import EDAdmissionLog from './components/EDAdmissionLog';
-import RnAssignmentForm from './components/rnAssignmentSheet/RnAssignmentForm';
+import RnAssignmentForm from './components/rnAssignmentSheet/RnAssignmentForm3';
 
 function App() {
 	return (
